@@ -10,9 +10,14 @@
             font-family: sans-serif;
         }
 
+        .responsive-table {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
         table {
             border-collapse: collapse;
-            width: 100%;
+            width: 900px;
             text-align: left;
         }
 
@@ -30,7 +35,8 @@
             margin: 5px;
         }
 
-        tfoot td, table th {
+        tfoot td,
+        table th {
             background-color: #ddd;
         }
 
@@ -43,47 +49,49 @@
 <body>
     <p>Tabela</p>
 
-    <table>
-        <caption>
-            Uma descrição para tabela
-        </caption>
-        <thead>
-            <tr>
-                <th>Título 1</th>
-                <th>Título 2</th>
-                <th>Título 3</th>
-            </tr>
-        </thead>
+    <div class="responsive-table">
+        <table>
+            <caption>
+                Uma descrição para tabela
+            </caption>
+            <thead>
+                <tr>
+                    <th>Título 1</th>
+                    <th>Título 2</th>
+                    <th>Título 3</th>
+                </tr>
+            </thead>
 
-        <tbody>
-            <tr>
-                <td>Corpo 1</td>
-                <td>Corpo 2</td>
-                <td>Corpo 3</td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
 
-            <tr>
-                <td colspan="2" >Corpo 1</td>
-                <td>Corpo 3</td>
-            </tr>
+                <tr>
+                    <td colspan="2">Corpo 1</td>
+                    <td>Corpo 3</td>
+                </tr>
 
-            <tr>
-                <td>Corpo 1</td>
-                <td>Corpo 2</td>
-                <td>Corpo 3</td>
-            </tr>
-        </tbody>            
-        <tfoot>
-            <tr>
-                <td colspan="2" rowspan="2"></td>
-                <td>Total:</td>
-            </tr>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" rowspan="2"></td>
+                    <td>Total:</td>
+                </tr>
 
-            <tr>
-                <td>R$ 789,00</td>
-            </tr>
-        </tfoot>
-    </table>
+                <tr>
+                    <td>R$ 789,00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 </body>
 
 </html>
